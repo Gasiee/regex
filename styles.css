@@ -1,0 +1,179 @@
+*{
+    font-family: Poppins;
+}
+body{
+    min-height: 100vh;
+    background-color:   rgba(255, 121, 121, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.lrn{
+    width: 525px;
+    height: 220px;
+    margin-left: 50px;
+}
+.lrn h3 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 55px;
+    letter-spacing: -0.5208333134651184px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: white;
+    
+}
+.lrn p {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: white;
+    
+}
+.main-input{
+    width: 540px;
+    height: 565px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.free{
+
+    width: 540px;
+    height: 60px;
+    top: 121px;
+    left: 735px;
+    gap: 0px;
+    opacity: 0px;
+    background: rgba(94, 84, 164, 1);
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 10px;
+}
+.free p {
+    color: white;
+}
+.minfo{
+    width: 540px;
+    height: 474px;
+    top: 205px;
+    left: 735px;
+    gap: 0px;
+    opacity: 0px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.minfo input{
+    width: 460px;
+    height: 56px;
+    gap: 0px;
+    border-radius: 5px 0px 0px 0px;
+    opacity: 0px;
+    border: 1px solid rgba(222, 222, 222, 1)
+}
+.minfo button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 460px;
+    height: 56px;
+    top: 344px;
+    left: 40px;
+    gap: 0px;
+    opacity: 0px;
+    background: rgba(56, 204, 139, 1);
+    border: 0;
+    border-radius: 5px;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 1px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: white;
+    box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.09) inset;
+    cursor: pointer;
+
+}
+.minfo button:hover{
+    background: rgba(119, 226, 179, 1);
+
+}
+.minfo p {
+
+    font-family: Poppins;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(186, 183, 212, 1);
+
+    
+}
+.minfo span{
+    color: rgba(255, 121, 121, 1);
+    font-family: Poppins;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    
+}
+input::placeholder{
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0.25px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    padding-left: 15px;
+    
+}
+input{
+    font-size: 20px;
+    outline: none;
+    padding-left: 15px;
+
+}
+#message {
+    position: absolute;
+    right: 0; /* Position it to the right of the input */
+    top: 50%; /* Center it vertically relative to the input */
+    transform: translateY(-50%);
+    color: green; /* Default color for valid messages */
+    font-size: 14px;
+    pointer-events: none; /* Prevent interaction with the message */
+  }
+  .error-message {
+    font-size: 12px;
+    color: #f56262;
+    display: none;
+  }
+  .error-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #f56262;
+    display: none;
+  }
