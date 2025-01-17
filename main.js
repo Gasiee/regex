@@ -1,42 +1,74 @@
-const inputs = document.querySelectorAll("input:not([type='submit'])");
+document.getElementById('validate').addEventListener('click', () => {
+    
+    const FirstName = document.getElementById('FirstName').value;
+    const message1 = document.getElementById('message1');
 
-inputs.forEach(input => {
-    input.addEventListener('invalid', addErrorMessage);
+    const LastName = document.getElementById('LastName').value;
+    const message2 = document.getElementById('message2');
 
-    input.addEventListener('blur', (event) => {
-        input.checkValidity();
-    })
+    const email = document.getElementById('email').value;
+    const message3 = document.getElementById('message3');
 
-    input.addEventListener('focus', removeErrorMessage);
-})
+    const password = document.getElementById('password').value;
+    const message4 = document.getElementById('message4');
 
-function addErrorMessage(e) {
-    var name = e.target.getAttribute("name");
+    const form = document.getElementById('form');
+    const inputElement1 = document.getElementById('FirstName');
+    const inputElement2 = document.getElementById('LastName');
+    const inputElement3 = document.getElementById('email');
+    const inputElement4 = document.getElementById('password');
 
-     error_icon = document.createElement('span');
-    error_icon.setAttribute("data-id", name);
-    error_icon.classList.add('error-icon');
-    error_icon.innerHTML = "<img src='images/icon-error.svg' alt=''>";
+    const errorIcon1 =document.querySelector('.error-icon1');
+    const errorIcon2 =document.querySelector('.error-icon2');
+    const errorIcon3 =document.querySelector('.error-icon3');
+    const errorIcon4 =document.querySelector('.error-icon4');
 
-    var error_message = document.createElement('span');
-    error_message.setAttribute("data-id", name);
-    error_message.classList.add('error-message');
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+    
+        validateInputs();
+    });
 
-    if (e.target.value == "" || e.target.value == null) error_message.innerHTML = "" + e.target.getAttribute("placeholder") + " cannot be empty.";
-    else error_message.innerHTML = "Looks like this is not an " + e.target.getAttribute("placeholder") + ".";
 
-    e.target.after(error_message);
-    e.target.after(error_icon);
+    
+    const regex = /^[a-zA-Z].{1,}$/;
+    const emregex = /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gim;
 
-    e.target.classList.add('error');
-}
+    if (!regex.test(FirstName)) {
+      message1.textContent = 'First Name cannot be empty!';
+      message1.style.color = 'rgba(255, 121, 121, 1)';
+      message1.style.margin = '0'
+      inputElement1.style.border = '2px solid rgba(255, 121, 121, 1)';
+      inputElement1.placeholder = ''
+      errorIcon1.style.display = 'block';
+      
+    } 
+    if (!regex.test(LastName)) {
+      message2.textContent = 'Last Name cannot be empty!';
+      message2.style.color = 'rgba(255, 121, 121, 1)';
+      message2.style.margin = '0'
+      inputElement2.style.border = '2px solid rgba(255, 121, 121, 1)';
+      inputElement2.placeholder = ''
+      errorIcon2.style.display = 'block';
+    } 
+    if (!emregex.test(email)) {
+      message3.textContent = 'Looks like this is not an email!';
+      message3.style.color = 'rgba(255, 121, 121, 1)';
+      message3.style.margin = '0'
+      inputElement3.style.border = '2px solid rgba(255, 121, 121, 1)';
+      inputElement3.placeholder = 'email@example/com'
+      errorIcon3.style.display = 'block';
 
-function removeErrorMessage(e) {
-    var elements = document.querySelectorAll("[data-id='"+ e.target.getAttribute("name")+"']");
+    } 
+    if (!regex.test(password)) {
+      message4.textContent = 'password cannot be empty!';
+      message4.style.color = 'rgba(255, 121, 121, 1)';
+      message4.style.margin = '0'
+      inputElement4.style.border = '2px solid rgba(255, 121, 121, 1)';
+      inputElement4.placeholder = ''
+      errorIcon4.style.display = 'block';
+    } 
 
-    elements.forEach(error_element => {
-        error_element.remove();
-    })
 
-    e.target.classList.remove('error');
-}
+
+  });

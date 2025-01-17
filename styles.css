@@ -62,7 +62,7 @@ body{
 }
 .minfo{
     width: 540px;
-    height: 474px;
+    height: 475px;
     top: 205px;
     left: 735px;
     gap: 0px;
@@ -73,6 +73,12 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    
+    
+}
+#form{
+
+    position: relative;
 }
 .minfo input{
     width: 460px;
@@ -80,7 +86,8 @@ body{
     gap: 0px;
     border-radius: 5px 0px 0px 0px;
     opacity: 0px;
-    border: 1px solid rgba(222, 222, 222, 1)
+    border: 1px solid rgba(222, 222, 222, 1);
+    
 }
 .minfo button{
     display: flex;
@@ -148,32 +155,79 @@ input::placeholder{
     padding-left: 15px;
     
 }
+
 input{
     font-size: 20px;
     outline: none;
     padding-left: 15px;
 
 }
-#message {
-    position: absolute;
-    right: 0; /* Position it to the right of the input */
+#message1  {
     top: 50%; /* Center it vertically relative to the input */
-    transform: translateY(-50%);
-    color: green; /* Default color for valid messages */
-    font-size: 14px;
-    pointer-events: none; /* Prevent interaction with the message */
-  }
-  .error-message {
+    transform: translateY(-25%);
+    transform: translateX(85%);
     font-size: 12px;
-    color: #f56262;
-    display: none;
+    margin-left: 60px;
   }
-  .error-icon {
+#message2  {
+    top: 50%; /* Center it vertically relative to the input */
+    transform: translateY(-25%);
+    transform: translateX(85%);
+    font-size: 12px;
+    margin-left: 60px;
+  }
+#message3  {
+    top: 50%; /* Center it vertically relative to the input */
+    transform: translateY(-25%);
+    transform: translateX(85%);
+    font-size: 12px;
+    margin-left: 60px;
+  }
+#message4  {
+    top: 50%; /* Center it vertically relative to the input */
+    transform: translateY(-25%);
+    transform: translateX(85%);
+    font-size: 12px;
+    margin-left: 60px;
+  }
+ 
+  .error-icon1 {
     position: absolute;
-    top: 50%;
-    right: 10px;
+    right: 38px;
+    top: 7%;
     transform: translateY(-50%);
-    font-size: 18px;
-    color: #f56262;
+    width: 20px;
+    height: 20px;
+    display: none;
+    
+  }
+  .error-icon2 {
+    position: absolute;
+    right: 38px;
+    top: 26%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    display: none;
+    
+  }
+  .error-icon3 {
+    position: absolute;
+    right: 38px;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    display: none;
+    
+  }
+  .error-icon4 {
+    position: absolute;
+    right: 38px;
+    top: 64%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
     display: none;
   }
+
